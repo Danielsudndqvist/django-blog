@@ -27,10 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-
-ALLOWED_HOSTS = ['8000-danielsudndq-djangoblog-bbrua4cimxv.ws-eu115.gitpod.io',]
+ALLOWED_HOSTS = [
+    '8000-danielsudndq-djangoblog-bbrua4cimxv.ws-eu115.gitpod.io',
+    ".herokuapp.com"
+]
 
 
 # Application definition
@@ -91,10 +93,9 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeinstitute-ide.net/",
+    "https://8000-ajgreaves-blog-lesson-pl-lfv6kgfdws.us2.codeanyapp.com",
     "https://*.herokuapp.com"
 ]
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
